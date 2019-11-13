@@ -62,5 +62,20 @@ namespace ApskaitaKar
 
             dgvKariai.DataSource = table;
         }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            if (Convert.ToInt32(txtKartojimas.Text) >= 5)
+            {
+                MessageBox.Show("Negalimas");
+            }
+            else
+            {
+                foreach (var karys in Kariai)
+                {
+                    karys.Soviniai = karys.soviniuPaskirstymas(Convert.ToInt32(txtKartojimas.Text));
+                }
+            }
+        }
     }
 }

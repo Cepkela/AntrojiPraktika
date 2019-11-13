@@ -84,6 +84,7 @@
     <Content Include="501.txt" />
     <Content Include="502.txt" />
     <Content Include="503.txt" />
+    <Content Include="Vadovai.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
