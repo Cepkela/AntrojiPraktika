@@ -1,0 +1,5 @@
+﻿1 Jonas Jonaitis Eil 40 Islaikyta
+2 Petras Petraitis Vyr.Eil 30 Neislaikyta
+3 Jonas Jonaitis Eil 40 Islaikyta
+4 Rytis Sulnis Eil 42 Islaikyta
+5 Petras Petraitis Vyr.Eil 30 Neislaikyta

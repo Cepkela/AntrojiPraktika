@@ -1,0 +1,12 @@
+﻿1 Jonas Jonaitis Eil 40 Islaikyta
+2 Petras Petraitis Vyr.Eil 30 Neislaikyta
+3 Andrew Anderson Eil 30 Islaikyta
+4 Alexis Harrison VyrEil 20 Neišlaikyta
+5 Bradford Douglas Grandinis 40 Islaikyta
+6 Rachael Mitchell J.Eil 50 Islaikyta
+7 Dominick Rogers Eil 60 Islaikyta
+8 Jody Wong VyrEil 70 Islaikyta
+9 Theodore Klein Eil 80 Islaikyta
+10 Leo Griffin VyrEil 90 Islaikyta
+11 Terence Logan Eil 40 Islaikyta
+12 Faith Bush Eil 50 Islaikyta
