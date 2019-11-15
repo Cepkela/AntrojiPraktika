@@ -15,6 +15,7 @@ namespace ApskaitaKar
     {
         readonly DataTable table = new DataTable();
         readonly List<Karys> Kariai = new List<Karys>();
+        readonly List<Vadovas> Vadovai = new List<Vadovas>();
         public Form1()
         {
             InitializeComponent();
@@ -27,7 +28,7 @@ namespace ApskaitaKar
             {
                 table.Rows.Clear();
             }
-            string[] lines = File.ReadAllLines(@"C:\Users\Cepatronijus\source\repos\Apskaita\Apskaita\" + comboBox1.SelectedItem.ToString() + ".txt");
+            string[] lines = File.ReadAllLines(@"C:\Users\Cepatronijus\source\repos\AntrojiPraktika\ApskaitaKar\ApskaitaKar\" + comboBox1.SelectedItem.ToString() + ".txt");
             string[] values;
 
             for (int i = 0; i < lines.Length; i++)
@@ -65,6 +66,7 @@ namespace ApskaitaKar
 
         private void Button1_Click(object sender, EventArgs e)
         {
+            Random r = new Random();
             if (Convert.ToInt32(txtKartojimas.Text) >= 5)
             {
                 MessageBox.Show("Negalimas");
@@ -75,6 +77,25 @@ namespace ApskaitaKar
                 {
                     karys.Soviniai = karys.soviniuPaskirstymas(Convert.ToInt32(txtKartojimas.Text));
                 }
+                if (Vadovai.Count == 0)
+                {
+                    string[] lines = File.ReadAllLines(@"C:\Users\Cepatronijus\source\repos\AntrojiPraktika\ApskaitaKar\ApskaitaKar\Vadovai.txt");
+                    for (int i = 0; i < lines.Length; i++)
+                    {
+                        string[] value = lines[i].ToString().Split(' ');
+                        string s = lines[i];
+                        string[] split = s.Split(' ');
+                        Vadovai.Add(new Vadovas(Convert.ToInt32(split[0]), split[1], split[2], split[3]));
+                    }
+                    var ranndomNumber = r.Next(0, Vadovai.Count - 1);
+                    Vadovai[ranndomNumber].printVadovas();
+                }
+                else
+                {
+                    var ranndomNumber = r.Next(0, Vadovai.Count - 1);
+                    Vadovai[ranndomNumber].printVadovas();
+                }
+                
             }
         }
     }
