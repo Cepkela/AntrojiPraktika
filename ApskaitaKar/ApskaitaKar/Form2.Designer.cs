@@ -28,10 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtKarioVardasRez = new System.Windows.Forms.TextBox();
-            this.txtKarioPavRez = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtGulint = new System.Windows.Forms.TextBox();
             this.txtStovint = new System.Windows.Forms.TextBox();
@@ -46,39 +43,17 @@
             this.cbAtstumas = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.cbVardas = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(63, 88);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Kario Vardas";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(63, 131);
+            this.label2.Location = new System.Drawing.Point(104, 131);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 13);
+            this.label2.Size = new System.Drawing.Size(33, 13);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Kario Pavarde";
-            // 
-            // txtKarioVardasRez
-            // 
-            this.txtKarioVardasRez.Location = new System.Drawing.Point(151, 85);
-            this.txtKarioVardasRez.Name = "txtKarioVardasRez";
-            this.txtKarioVardasRez.Size = new System.Drawing.Size(100, 20);
-            this.txtKarioVardasRez.TabIndex = 2;
-            // 
-            // txtKarioPavRez
-            // 
-            this.txtKarioPavRez.Location = new System.Drawing.Point(151, 124);
-            this.txtKarioPavRez.Name = "txtKarioPavRez";
-            this.txtKarioPavRez.Size = new System.Drawing.Size(100, 20);
-            this.txtKarioPavRez.TabIndex = 3;
+            this.label2.Text = "Karys";
             // 
             // label3
             // 
@@ -198,11 +173,20 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
+            // cbVardas
+            // 
+            this.cbVardas.FormattingEnabled = true;
+            this.cbVardas.Location = new System.Drawing.Point(143, 131);
+            this.cbVardas.Name = "cbVardas";
+            this.cbVardas.Size = new System.Drawing.Size(121, 21);
+            this.cbVardas.TabIndex = 18;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cbVardas);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.cbAtstumas);
@@ -217,10 +201,7 @@
             this.Controls.Add(this.txtStovint);
             this.Controls.Add(this.txtGulint);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtKarioPavRez);
-            this.Controls.Add(this.txtKarioVardasRez);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Name = "Form2";
             this.Text = "c";
             this.ResumeLayout(false);
@@ -229,11 +210,7 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtKarioVardasRez;
-        private System.Windows.Forms.TextBox txtKarioPavRez;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtGulint;
         private System.Windows.Forms.TextBox txtStovint;
@@ -248,5 +225,6 @@
         private System.Windows.Forms.ComboBox cbAtstumas;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox cbVardas;
     }
 }

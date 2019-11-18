@@ -17,12 +17,13 @@ namespace ApskaitaKar
         {
             InitializeComponent();
             Kariais = Kariai;
+            pridetiKaruius();
         }
         private void Button1_Click(object sender, EventArgs e)
         {
             foreach (var item in Kariais)
             {
-                if (item.Vardas == txtKarioVardasRez.Text && item.Pavarde == txtKarioPavRez.Text)
+                if (item.Vardas + " " + item.Pavarde == cbVardas.SelectedItem.ToString())
                 {
                     item.padeciuIrasymas(Convert.ToInt32(txtGulint.Text), Convert.ToInt32(txtStovint.Text), Convert.ToInt32(txtIsApkaso.Text),
                         Convert.ToInt32(txtSedint.Text), Convert.ToInt32(txtPriklaupus.Text));
@@ -39,6 +40,13 @@ namespace ApskaitaKar
                         item.Soviniai = 0;
                     }
                 }
+            }
+        }
+        private void pridetiKaruius()
+        {
+            foreach (var item in Kariais)
+            {
+                cbVardas.Items.Add(item.Vardas + " " + item.Pavarde);
             }
         }
     }
