@@ -8,8 +8,20 @@ namespace ApskaitaKar
 {
     public class Kuopa
     {
+        public string Pavadinimas { get; set; }
         public int Id { get; set; }
         public List<Karys> Kariai;
-        public List<Vadovas> Vadovai;
+        public string Vadovas { get; set; }
+
+        public Kuopa(int id, List<Karys> karia, string pavadinimas)
+        {
+            Pavadinimas = pavadinimas;
+            Id = id;
+            Kariai = karia;
+        }
+        public Kuopa(string vadovas)
+        {
+            Vadovas = vadovas;
+        }
     }
 }

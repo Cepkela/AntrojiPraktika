@@ -16,13 +16,17 @@ namespace ApskaitaKar
         readonly DataTable table = new DataTable();
         readonly List<Karys> Kariai = new List<Karys>();
         readonly List<Vadovas> Vadovai = new List<Vadovas>();
+        readonly List<Kuopa> Kuopos = new List<Kuopa>();
+        int ranndomNumber;
         public Form1()
         {
             InitializeComponent();
+            List<Karys> Kariai;
         }
-
+        
         private void BtnIkelti_Click(object sender, EventArgs e)
         {
+            int kuopaId = 0;
             Kariai.Clear();
             if (table.Rows.Count > 1)
             {
@@ -50,6 +54,8 @@ namespace ApskaitaKar
                 }
                 table.Rows.Add(row);
             }
+            Kuopos.Add(new Kuopa(kuopaId, Kariai, comboBox1.SelectedItem.ToString()));
+            kuopaId++;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -87,16 +93,48 @@ namespace ApskaitaKar
                         string[] split = s.Split(' ');
                         Vadovai.Add(new Vadovas(Convert.ToInt32(split[0]), split[1], split[2], split[3]));
                     }
-                    var ranndomNumber = r.Next(0, Vadovai.Count - 1);
+                    ranndomNumber = r.Next(0, Vadovai.Count - 1);
                     Vadovai[ranndomNumber].printVadovas();
+                    foreach (var item in Kuopos)
+                    {
+                        if (item.Vadovas != null)
+                        {
+                            vadovoPriskyrimas();
+                        }
+                    }
+                    vadovoPriskyrimas();
                 }
                 else
                 {
-                    var ranndomNumber = r.Next(0, Vadovai.Count - 1);
+                    ranndomNumber = r.Next(0, Vadovai.Count - 1);
                     Vadovai[ranndomNumber].printVadovas();
+                    foreach (var item in Kuopos)
+                    {
+                        if (item.Vadovas!=null)
+                        {
+                            vadovoPriskyrimas();
+                        }
+                    }
                 }
                 
             }
+        }
+        public void vadovoPriskyrimas()
+        {
+            foreach (var item in Kuopos)
+            {
+                if (item.Pavadinimas == comboBox1.SelectedItem.ToString())
+                {
+                    item.Vadovas = Vadovai[ranndomNumber].Vardas;
+                }
+            }
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            Form2 rezultIvedimas = new Form2(Kariai);
+            rezultIvedimas.Show();
+
         }
     }
 }

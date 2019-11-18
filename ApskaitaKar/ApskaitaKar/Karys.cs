@@ -15,6 +15,7 @@ namespace ApskaitaKar
         public int Taskai { get; set; }
         public string Ivertinimas { get; set; }
         public int Soviniai { get; set; }
+        public _5Pratimas Pratimas { get; set; }
         public Karys(int id, string vardas, string pavarde, string laipsnis, int taskai, string ivertinimas)
         {
             Id = id;
@@ -32,6 +33,10 @@ namespace ApskaitaKar
         {
             int rezultatas = 30 * kartojimuKiekis;
             return rezultatas;
+        }
+        public void padeciuIrasymas(int gulint, int stovint, int isApkaso, int sedint, int priklaupus)
+        {
+            Pratimas = new _5Pratimas(gulint, isApkaso, priklaupus, sedint, stovint);
         }
 
     }
