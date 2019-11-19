@@ -7,14 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace ApskaitaKar
 {
     public partial class Form2 : Form
     {
+        Form1 formm1;
         List<Karys> Kariais;
-        public Form2(List<Karys> Kariai)
+        DateTime date;
+        public Form2(List<Karys> Kariai, Form1 form1)
         {
+            formm1 = form1;
             InitializeComponent();
             Kariais = Kariai;
             pridetiKaruius();
@@ -33,6 +37,7 @@ namespace ApskaitaKar
                     {
                         item.Ivertinimas = "Į";
                         item.Soviniai = 0;
+                        item.Data = DateTime.Now.Date;
                     }
                     else
                     {
@@ -48,6 +53,28 @@ namespace ApskaitaKar
             {
                 cbVardas.Items.Add(item.Vardas + " " + item.Pavarde);
             }
+        }
+
+        private void BtnIšsaugoti_Click(object sender, EventArgs e)
+        {
+            System.IO.File.WriteAllText(@"C:\Users\Cepatronijus\source\repos\AntrojiPraktika\ApskaitaKar\ApskaitaKar\" +
+                formm1.comboBox1.SelectedItem.ToString() + ".txt", String.Empty);
+            foreach (var item in Kariais)
+            {
+                string[] lines = { item.Id + " " + item.Vardas + " " + item.Pavarde + " " + item.Laipsnis + " " + item.Data.Date.ToShortDateString() + " " + item.Ivertinimas };
+                System.IO.File.AppendAllLines(@"C:\Users\Cepatronijus\source\repos\AntrojiPraktika\ApskaitaKar\ApskaitaKar\"+formm1.comboBox1.SelectedItem.ToString()+".txt", lines);
+            }
+            MessageBox.Show("Issaugota");
+        }
+
+        private void BtnGryžti_Click(object sender, EventArgs e)
+        {
+            Hide();
+        }
+
+        private void Label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

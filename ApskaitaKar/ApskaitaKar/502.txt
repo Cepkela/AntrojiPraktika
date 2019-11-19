@@ -1,3 +1,3 @@
-﻿1 Jonas Jonaitis Eil 40 Islaikyta
-2 Petras Petraitis Vyr.Eil 30 Neislaikyta
-3 Rytis Sulnis Eil 42 Islaikyta
+﻿1 Jonas Jonaitis Eil 40 2018/09/11 Islaikyta
+2 Petras Petraitis Vyr.Eil 30 2018/09/11 Neislaikyta
+3 Rytis Sulnis Eil 42 2018/09/11 Islaikyta

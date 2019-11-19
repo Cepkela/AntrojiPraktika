@@ -26,7 +26,7 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
+        public void InitializeComponent()
         {
             this.btnIkelti = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -71,7 +71,7 @@
             // dgvKariai
             // 
             this.dgvKariai.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvKariai.Location = new System.Drawing.Point(44, 275);
+            this.dgvKariai.Location = new System.Drawing.Point(39, 193);
             this.dgvKariai.Name = "dgvKariai";
             this.dgvKariai.Size = new System.Drawing.Size(640, 150);
             this.dgvKariai.TabIndex = 5;
@@ -87,7 +87,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(649, 121);
+            this.button1.Location = new System.Drawing.Point(464, 81);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 7;
@@ -98,7 +98,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(621, 43);
+            this.label2.Location = new System.Drawing.Point(438, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(112, 13);
             this.label2.TabIndex = 8;
@@ -107,7 +107,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(499, 81);
+            this.label3.Location = new System.Drawing.Point(325, 40);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(119, 13);
             this.label3.TabIndex = 9;
@@ -115,14 +115,14 @@
             // 
             // txtKartojimas
             // 
-            this.txtKartojimas.Location = new System.Drawing.Point(624, 81);
+            this.txtKartojimas.Location = new System.Drawing.Point(450, 40);
             this.txtKartojimas.Name = "txtKartojimas";
             this.txtKartojimas.Size = new System.Drawing.Size(100, 20);
             this.txtKartojimas.TabIndex = 10;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(285, 190);
+            this.button2.Location = new System.Drawing.Point(58, 152);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(140, 23);
             this.button2.TabIndex = 11;
@@ -134,7 +134,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(697, 360);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.txtKartojimas);
             this.Controls.Add(this.label3);
@@ -156,7 +156,6 @@
         #endregion
 
         private System.Windows.Forms.Button btnIkelti;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.DataGridView dgvKariai;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
@@ -164,6 +163,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtKartojimas;
         private System.Windows.Forms.Button button2;
+        public System.Windows.Forms.ComboBox comboBox1;
     }
 }
 

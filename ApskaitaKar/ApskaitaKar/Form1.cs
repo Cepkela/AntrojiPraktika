@@ -21,7 +21,6 @@ namespace ApskaitaKar
         public Form1()
         {
             InitializeComponent();
-            List<Karys> Kariai;
         }
         
         private void BtnIkelti_Click(object sender, EventArgs e)
@@ -44,9 +43,9 @@ namespace ApskaitaKar
                 string vardas = split[1];
                 string pavarde = split[2];
                 string laipsnis = split[3];
-                int taskai = Convert.ToInt32(split[4]);
+                DateTime date = Convert.ToDateTime(split[4]);
                 string ivertinimas = split[5];
-                Kariai.Add(new Karys(id, vardas, pavarde, laipsnis, taskai, ivertinimas));
+                Kariai.Add(new Karys(id, vardas, pavarde, laipsnis, date, ivertinimas));
                 string[] row = new string[values.Length];
                 for (int j = 0; j < values.Length; j++)
                 {
@@ -64,7 +63,7 @@ namespace ApskaitaKar
             table.Columns.Add("Vardas", typeof(string));
             table.Columns.Add("Pavarde", typeof(string));
             table.Columns.Add("Laipsnis", typeof(string));
-            table.Columns.Add("Taškai", typeof(int));
+            table.Columns.Add("Data", typeof(DateTime));
             table.Columns.Add("Islaikyta", typeof(string));
 
             dgvKariai.DataSource = table;
@@ -132,7 +131,7 @@ namespace ApskaitaKar
 
         private void Button2_Click(object sender, EventArgs e)
         {
-            Form2 rezultIvedimas = new Form2(Kariai);
+            Form2 rezultIvedimas = new Form2(Kariai, this);
             rezultIvedimas.Show();
 
         }
